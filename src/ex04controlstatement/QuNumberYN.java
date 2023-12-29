@@ -3,7 +3,6 @@ package ex04controlstatement;
 import java.io.IOException;
 
 public class QuNumberYN {
-
 	public static void main(String[] args) throws IOException {
 		int asciiCode;
 		System.out.print("하나의 문자를 입력하세요:");
