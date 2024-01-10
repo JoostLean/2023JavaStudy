@@ -5,10 +5,12 @@ import java.util.Scanner;
 public class QuFillArray {
 
 	public static void main(String[] args) {
+		//입력받은 정수를 순서대로 입력할 배열
 		int[] arrNumber = new int[10];
+		//홀,짝을 구분해서 입력할 배열 선언
 		int[] num = new int[10];
-		int num1 = 9;
-		int num2 = 0;
+		int numEnd = 9;
+		int numStart = 0;
 		
 		Scanner scanner = new Scanner(System.in);
 		for(int i = 0; i<arrNumber.length; i++) {
@@ -25,11 +27,11 @@ public class QuFillArray {
 		for(int i = 0 ; i<arrNumber.length ; i++) {
 			int numState = arrNumber[i];
 			if(numState%2 == 0) {
-				num[num1] = numState;
-				num1--;
+				num[numEnd] = numState;
+				numEnd--;
 			} else {
-				num[num2] = numState;
-				num2++;
+				num[numStart] = numState;
+				numStart++;
 			}
 		}
 		for(int i = 0 ; i<num.length ; i++) {
