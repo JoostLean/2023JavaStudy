@@ -1,9 +1,11 @@
 package ex12inheritance;
 
+//친구의 정보를 저장할 기본클래스
 class MyFriendInfo{
 	private String name;
 	int age;
 
+	//클래스와 동일한 메서드 형태의 생성자
 	public MyFriendInfo(String name, int age) {
 		this.name = name;
 		this.age = age;
@@ -18,8 +20,9 @@ class MyFriendInfo{
 class MyFriendDetailInfo extends MyFriendInfo
 {
 	private String addr;
-    private String phone;
+	private String phone;
 
+	//생성자
 	public MyFriendDetailInfo(String name, int age, String addr, String phone) {
 		super(name, age);
 		this.addr = addr;
@@ -34,9 +37,10 @@ class MyFriendDetailInfo extends MyFriendInfo
 }
 public class QuMyFriendDetailInfo {
 	public static void main(String[] args) {
-		MyFriendDetailInfo info = new MyFriendDetailInfo("이순신", 100, "성균관", "010-1000-8888");
-		info.showMyFriendDetailInfo();
 		//이름, 나이, 주소, 전화번호를 인자로 객체를 생성…
+		MyFriendDetailInfo info = 
+				new MyFriendDetailInfo("이순신", 100, "성균관", "010-1000-8888");
 		//정보Print
+		info.showMyFriendDetailInfo();
 	}
 }
